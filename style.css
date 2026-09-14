@@ -364,7 +364,7 @@ background-position: 200% 0;
     margin-top: 20px;
 
     font-family:
-        "TH Fah Kwang",
+        "TH Fah Kwang Web",
         "K2D",
         sans-serif;
 
@@ -382,7 +382,7 @@ background-position: 200% 0;
     margin-top: 8px;
 
     font-family:
-        "TH Fah Kwang",
+        "TH Fah Kwang Web",
         "K2D",
         sans-serif;
 
@@ -846,7 +846,7 @@ section {
 .section-heading h2 {
 
     font-family:
-        "TH Fah Kwang",
+        "TH Fah Kwang Web",
         "K2D",
         sans-serif;
 
@@ -862,7 +862,7 @@ section {
 .thai-heading {
 
     font-family:
-        "TH Fah Kwang",
+        "TH Fah Kwang Web",
         "K2D",
         sans-serif;
 
@@ -986,7 +986,7 @@ section {
 .product-info h3 {
 
     font-family:
-        "TH Fah Kwang",
+        "TH Fah Kwang Web",
         "K2D",
         sans-serif;
 
@@ -1128,7 +1128,7 @@ section {
 .district-btn h3 {
 
     font-family:
-        "TH Fah Kwang",
+        "TH Fah Kwang Web",
         "K2D",
         sans-serif;
 
@@ -1210,7 +1210,7 @@ section {
 .result-header h3 {
 
     font-family:
-        "TH Fah Kwang",
+        "TH Fah Kwang Web",
         "K2D",
         sans-serif;
 
@@ -1263,7 +1263,7 @@ section {
 .district-product h4 {
 
     font-family:
-        "TH Fah Kwang",
+        "TH Fah Kwang Web",
         "K2D",
         sans-serif;
 
@@ -1456,7 +1456,7 @@ section {
 .about-card h2 {
 
     font-family:
-        "TH Fah Kwang",
+        "TH Fah Kwang Web",
         "K2D",
         sans-serif;
 
@@ -1622,7 +1622,7 @@ section {
 .modal-content h2 {
 
     font-family:
-        "TH Fah Kwang",
+        "TH Fah Kwang Web",
         "K2D",
         sans-serif;
 
@@ -2219,7 +2219,7 @@ footer small {
 
 /* ชื่อสินค้า ENGLISH */
 #districtProducts .district-product-info h4 {
-    font-family: "TH Fah Kwang", "K2D", sans-serif !important;
+    font-family: "TH Fah Kwang Web", "K2D", sans-serif !important;
     font-size: 28px !important;
     font-weight: 600 !important;
     line-height: 1.2 !important;
@@ -2580,7 +2580,7 @@ footer small {
 
 .guide-header h1 {
     font-family:
-        "TH Fah Kwang",
+        "TH Fah Kwang Web",
         "K2D",
         sans-serif;
 
@@ -2595,7 +2595,7 @@ footer small {
     margin-top: 8px;
 
     font-family:
-        "TH Fah Kwang",
+        "TH Fah Kwang Web",
         "K2D",
         sans-serif;
 
@@ -2676,7 +2676,7 @@ footer small {
 
 .guide-category h2 {
     font-family:
-        "TH Fah Kwang",
+        "TH Fah Kwang Web",
         "K2D",
         sans-serif;
 
@@ -3457,5 +3457,30 @@ footer small {
         font-size: 10px;
     }
 
+}
+
+@font-face {
+    font-family: "TH Fah Kwang Web";
+    src: url("fonts/TH%20FAHKWANG.TTF") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* TH FAH KWANG — NORMAL */
+.hero h2,
+.thai-subtitle,
+.section-heading h2,
+.thai-heading,
+.product-info h3,
+.district-btn h3,
+.result-header h3,
+.district-product h4,
+.about-card h2,
+.modal-content h2,
+.guide-header h1,
+.guide-thai-title,
+.guide-category h2,
+#districtProducts .district-product-info h4 {
+    font-weight: normal !important;
 }
 
