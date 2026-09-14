@@ -3461,7 +3461,7 @@ footer small {
 
 @font-face {
     font-family: "TH Fah Kwang Web";
-    src: url("fonts/TH%20FAHKWANG.TTF") format("truetype");
+    src: url("TH%20FAHKWANG.TTF") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
