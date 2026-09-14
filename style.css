@@ -393,6 +393,10 @@ background-position: 200% 0;
     color: #617874;
 
     letter-spacing: 0.5px;
+   
+text-shadow:
+        0.3px 0 0 currentColor,
+        -0.3px 0 0 currentColor;
 
 }
 
