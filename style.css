@@ -1,0 +1,3460 @@
+/* =====================================================
+   SK OTOP
+   MAIN STYLE
+===================================================== */
+
+
+/* ================= ROOT ================= */
+
+:root {
+
+    --pink: #ffeff2;
+    --pink-soft: #fff7f8;
+    --pink-deep: #e9b8c3;
+
+    --blue: #b7e9e9;
+    --blue-soft: #e9f8f8;
+    --blue-deep: #7dbfc0;
+
+    --gold: #c9a75d;
+    --gold-light: #ead9a8;
+
+    --green: #7fa99b;
+    --green-dark: #547a6d;
+
+    --text: #425654;
+    --text-light: #70817e;
+
+    --white: #ffffff;
+
+    --shadow:
+        0 20px 60px rgba(79, 111, 105, 0.10);
+
+}
+
+
+/* ================= RESET ================= */
+
+* {
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    scroll-behavior: smooth;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    font-family:
+        "K2D",
+        "TH K2D July8",
+        "Tahoma",
+        sans-serif;
+
+    color: var(--text);
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            var(--pink-soft) 35%,
+            #ffffff 70%,
+            var(--blue-soft) 100%
+        );
+
+    overflow-x: hidden;
+
+}
+
+
+a {
+
+    text-decoration: none;
+
+    color: inherit;
+
+}
+
+
+button {
+
+    font-family: inherit;
+
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    height: 76px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 6%;
+
+    background: rgba(255,255,255,0.75);
+
+    backdrop-filter: blur(16px);
+
+    -webkit-backdrop-filter: blur(16px);
+
+    border-bottom:
+        1px solid rgba(201,167,93,0.12);
+
+    z-index: 1000;
+
+}
+
+
+.logo {
+
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 5px;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    color: var(--green-dark);
+
+}
+
+
+.logo span {
+
+    font-size: 25px;
+
+    font-weight: 600;
+
+}
+
+
+.logo small {
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.navbar nav {
+
+    display: flex;
+
+    gap: 35px;
+
+}
+
+
+.navbar nav a {
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+
+    color: var(--text-light);
+
+    transition: .3s;
+
+}
+
+
+.navbar nav a:hover {
+
+    color: var(--green-dark);
+
+}
+
+
+.menu-btn {
+
+    display: none;
+
+    border: none;
+
+    background: none;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+}
+
+
+/* ================= MOBILE MENU ================= */
+
+.mobile-menu {
+
+    position: fixed;
+
+    top: 76px;
+
+    right: 15px;
+
+    width: 190px;
+
+    padding: 15px;
+
+    display: none;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    background: rgba(255,255,255,.95);
+
+    border-radius: 18px;
+
+    box-shadow: var(--shadow);
+
+    z-index: 999;
+
+}
+
+
+.mobile-menu.active {
+
+    display: flex;
+
+}
+
+
+.mobile-menu a {
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+}
+
+
+.mobile-menu a:hover {
+
+    background: var(--pink);
+
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+
+    min-height: 100vh;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    padding: 120px 8% 80px;
+
+    background:
+
+        radial-gradient(
+            circle at 10% 30%,
+            rgba(255,239,242,.9),
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(183,233,233,.55),
+            transparent 35%
+        ),
+
+        #fff;
+
+}
+
+
+/* ================= HERO TEXT ================= */
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 20;
+
+    max-width: 650px;
+
+}
+
+
+.small-label {
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    color: var(--green);
+
+    margin-bottom: 15px;
+
+}
+
+
+.hero h1 {
+    position: relative;
+    display: inline-block;
+
+    font-family: "Orange Avenue", serif;
+    font-size: clamp(65px, 10vw, 145px);
+    line-height: .9;
+    font-weight: normal;
+    letter-spacing: -2px;
+
+    color: var(--green-dark);
+
+    background: linear-gradient(
+    110deg,
+    var(--green-dark) 0%,
+    var(--green-dark) 46%,
+
+    rgba(255,255,255,.08) 48%,
+    rgba(255,255,255,.55) 49.5%,
+    rgba(255,255,255,.12) 51%,
+
+    var(--green-dark) 54%,
+    var(--green-dark) 100%
+);
+
+background-size: 300% 100%;
+background-position: 200% 0;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: otopShine 7s linear infinite;
+}
+
+
+.hero h2 {
+
+    margin-top: 20px;
+
+    font-family:
+        "TH Fah Kwang",
+        "K2D",
+        sans-serif;
+
+    font-weight: 300;
+
+    font-size: clamp(22px, 3vw, 38px);
+
+    color: #617874;
+
+}
+
+
+.thai-subtitle {
+
+    margin-top: 8px;
+
+    font-family:
+        "TH Fah Kwang",
+        "K2D",
+        sans-serif;
+
+    font-size: 20px;
+
+    font-weight: 500;
+
+    color: #617874;
+
+    letter-spacing: 0.5px;
+
+}
+
+.hero-description {
+
+    margin-top: 25px;
+
+    max-width: 520px;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+    color: var(--text-light);
+
+}
+
+
+/* ================= BUTTON ================= */
+
+.primary-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-top: 35px;
+
+    padding: 14px 22px;
+
+    border-radius: 50px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            var(--green-dark),
+            #7fa99b
+        );
+
+    color: white;
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+
+    box-shadow:
+        0 12px 25px rgba(84,122,109,.2);
+
+    transition: .3s;
+
+}
+
+
+.primary-btn:hover {
+
+    transform: translateY(-3px);
+
+}
+
+
+/* ================= LOTUS SCENE ================= */
+
+.lotus-scene {
+
+    position: absolute;
+
+    right: -50px;
+
+    bottom: -80px;
+
+    width: min(600px, 55vw);
+
+    z-index: 10;
+
+    transition:
+        transform 1s cubic-bezier(.2,.7,.2,1);
+
+}
+
+
+/*
+   เมื่อ scroll ลง
+   ดอกบัวจะเลื่อนลง
+   แต่ hero text ไม่ขยับ
+*/
+
+.hero.scrolled .lotus-scene {
+
+    transform:
+        translateY(180px)
+        scale(.92);
+
+}
+
+
+.lotus-svg {
+
+    width: 100%;
+
+    height: auto;
+
+    overflow: visible;
+
+}
+
+
+/* ================= LOTUS COLORS ================= */
+
+.lotus-bloom path {
+
+    fill: #f6ccd5;
+
+    stroke: #dcaeb9;
+
+    stroke-width: 1.5;
+
+}
+
+/* สีอ่อนด้านในกลีบ */
+.lotus-bloom .bloom-inner {
+    fill: #f7d6dd !important;
+    stroke: #f7d6dd !important;
+  stroke-width: 2;
+}
+
+
+.lotus-bloom .center-petal {
+
+    fill: #f6ccd5;
+
+}
+
+
+/* กลีบนอกของดอกบัวตูม */
+.lotus-bud > path:not(.bud-center):not(.bud-base) {
+    fill: #f6ccd5;
+    stroke: #dcaeb9;
+    stroke-width: 2;
+}
+
+/* กลีบกลาง */
+.lotus-bud .bud-center {
+    fill: #f7d6dd;
+    stroke: none;
+}
+
+/* ฐานดอกบัวตูม */
+.lotus-bud .bud-base {
+    fill: #a4c7b8;
+    stroke: none;
+}
+
+.lotus-bud .bud-base-left,
+.lotus-bud .bud-base-right {
+    fill: #a4c7b8;
+    stroke: #7fa99a;
+    stroke-width: 1;
+}
+
+
+.lotus-leaves path {
+
+    fill: #a4c7b8;
+
+    stroke: #7fa99a;
+
+    stroke-width:1.7;
+
+}
+
+
+/* ================= LOTUS MOVEMENT ================= */
+
+.lotus-bloom {
+
+    animation:
+        lotusFloat 5s ease-in-out infinite;
+
+    transform-origin: 300px 350px;
+
+}
+
+
+.lotus-bud {
+
+    animation:
+        budFloat 6s ease-in-out infinite;
+
+}
+
+
+@keyframes lotusFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-8px)
+            rotate(-1deg);
+
+    }
+
+}
+
+
+@keyframes budFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-10px);
+
+    }
+
+}
+
+
+/* ================= PETALS ================= */
+
+.floating-petals {
+
+    position: absolute;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+}
+
+
+.floating-petals span {
+
+    position: absolute;
+
+    color: #e6b6c1;
+
+    opacity: .45;
+
+    font-size: 18px;
+
+    animation:
+        petalWind
+        12s linear infinite;
+
+}
+
+
+.floating-petals span:nth-child(1) {
+
+    left: 10%;
+
+    top: 20%;
+
+    animation-delay: 0s;
+
+}
+
+
+.floating-petals span:nth-child(2) {
+
+    left: 20%;
+
+    top: 65%;
+
+    animation-delay: 3s;
+
+}
+
+
+.floating-petals span:nth-child(3) {
+
+    left: 40%;
+
+    top: 15%;
+
+    animation-delay: 5s;
+
+}
+
+
+.floating-petals span:nth-child(4) {
+
+    left: 55%;
+
+    top: 75%;
+
+    animation-delay: 2s;
+
+}
+
+
+.floating-petals span:nth-child(5) {
+
+    left: 75%;
+
+    top: 30%;
+
+    animation-delay: 7s;
+
+}
+
+
+.floating-petals span:nth-child(6) {
+
+    left: 90%;
+
+    top: 60%;
+
+    animation-delay: 4s;
+
+}
+
+
+@keyframes petalWind {
+
+    0% {
+
+        transform:
+            translateX(0)
+            translateY(0)
+            rotate(0deg);
+
+    }
+
+    30% {
+
+        transform:
+            translateX(-60px)
+            translateY(90px)
+            rotate(90deg);
+
+    }
+
+    60% {
+
+        transform:
+            translateX(-150px)
+            translateY(30px)
+            rotate(180deg);
+
+    }
+
+    100% {
+
+        transform:
+            translateX(-350px)
+            translateY(150px)
+            rotate(360deg);
+
+    }
+
+}
+
+
+/* ================= BLOBS ================= */
+
+.soft-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    opacity: 0.10;
+    pointer-events: none;
+}
+
+.blob-one {
+    background: #ffeff2;
+    width: 420px;
+    height: 420px;
+    top: 5%;
+    left: -120px;
+}
+
+.blob-two {
+    background: #b7e9e9;
+    width: 420px;
+    height: 420px;
+    top: 25%;
+    right: -120px;
+}
+
+
+/* ================= SECTION ================= */
+
+section {
+
+    position: relative;
+
+    scroll-margin-top: 80px;
+
+}
+
+
+.featured-section,
+.district-section,
+.about-section {
+
+    padding: 110px 8%;
+
+}
+
+
+/* ================= HEADING ================= */
+
+.section-heading {
+
+    max-width: 700px;
+
+    margin: 0 auto 60px;
+
+    text-align: center;
+
+}
+
+
+.eyebrow {
+
+    color: var(--gold);
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    font-weight: 600;
+
+    margin-bottom: 12px;
+
+}
+
+
+.section-heading h2 {
+
+    font-family:
+        "TH Fah Kwang",
+        "K2D",
+        sans-serif;
+
+    font-size: clamp(42px, 6vw, 70px);
+
+    font-weight: 700;
+
+    color: var(--green-dark);
+
+}
+
+
+.thai-heading {
+
+    font-family:
+        "TH Fah Kwang",
+        "K2D",
+        sans-serif;
+
+    font-size: 35px;
+
+    font-weight: 900;
+
+    color: var(--green);
+
+    margin-top: 4px;
+
+}
+
+
+.section-heading > p:last-child {
+
+    margin-top: 15px;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    color: var(--text-light);
+
+}
+
+
+/* ================= PRODUCT GRID ================= */
+
+.product-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 24px;
+
+    max-width: 1250px;
+
+    margin: auto;
+
+}
+
+
+.product-card {
+
+    background: rgba(255,255,255,.78);
+
+    border:
+        1px solid rgba(201,167,93,.15);
+
+    border-radius: 28px;
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow);
+
+    transition:
+        .4s cubic-bezier(.2,.7,.2,1);
+
+    cursor: pointer;
+
+}
+
+
+.product-card:hover {
+
+    transform:
+        translateY(-10px);
+
+    box-shadow:
+        0 25px 60px
+        rgba(79,111,105,.16);
+
+}
+
+
+.product-image {
+
+    height: 230px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 50px;
+
+    color: rgba(84,122,109,.45);
+
+    background:
+
+        radial-gradient(
+            circle at 50% 40%,
+            rgba(255,255,255,.8),
+            transparent 50%
+        ),
+
+        linear-gradient(
+            145deg,
+            var(--pink),
+            var(--blue-soft)
+        );
+
+}
+
+
+.product-info {
+
+    padding: 22px;
+
+}
+
+
+.product-info h3 {
+
+    font-family:
+        "TH Fah Kwang",
+        "K2D",
+        sans-serif;
+
+    font-size: 23px;
+
+    color: var(--green-dark);
+
+}
+
+
+.product-thai {
+
+    font-size: 13px;
+
+    color: var(--green);
+
+    margin-top: 3px;
+
+}
+
+
+.product-location {
+
+    margin-top: 15px;
+
+    font-size: 12px;
+
+    color: var(--text-light);
+
+}
+
+
+.view-detail {
+
+    display: inline-block;
+
+    margin-top: 17px;
+
+    font-size: 12px;
+
+    color: var(--gold);
+
+}
+
+
+/* ================= DISTRICTS ================= */
+
+.district-section {
+
+    background:
+
+        linear-gradient(
+            180deg,
+            rgba(183,233,233,.16),
+            rgba(255,255,255,.8)
+        );
+
+}
+
+
+.district-grid {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 16px;
+
+}
+
+
+.district-btn {
+
+    position: relative;
+
+    border: none;
+
+    background: rgba(255,255,255,.8);
+
+    border:
+        1px solid rgba(84,122,109,.12);
+
+    padding: 25px;
+
+    border-radius: 22px;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    color: var(--text);
+
+    transition: .3s;
+
+    box-shadow:
+        0 10px 35px
+        rgba(79,111,105,.06);
+
+}
+
+
+.district-btn:hover,
+.district-btn.active {
+
+    background: var(--pink);
+
+    transform: translateY(-4px);
+
+    border-color:
+        rgba(201,167,93,.4);
+
+}
+
+
+.district-number {
+
+    position: absolute;
+
+    right: 20px;
+
+    top: 15px;
+
+    font-size: 30px;
+
+    color: rgba(201,167,93,.25);
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+}
+
+
+.district-btn h3 {
+
+    font-family:
+        "TH Fah Kwang",
+        "K2D",
+        sans-serif;
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    color: var(--green-dark);
+
+}
+
+
+.district-btn p {
+
+    margin-top: 3px;
+
+    font-size: 13px;
+
+    color: var(--text-light);
+
+}
+
+
+/* ================= DISTRICT RESULT ================= */
+
+.district-result {
+
+    max-width: 1100px;
+
+    margin: 70px auto 0;
+
+    padding: 45px;
+
+    border-radius: 35px;
+
+    background:
+        rgba(255,255,255,.8);
+
+    box-shadow: var(--shadow);
+
+    display: none;
+
+}
+
+
+.district-result.show {
+
+    display: block;
+
+    animation:
+        resultIn .5s ease;
+
+}
+
+
+@keyframes resultIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+.result-header h3 {
+
+    font-family:
+        "TH Fah Kwang",
+        "K2D",
+        sans-serif;
+
+    font-size: 42px;
+
+    color: var(--green-dark);
+
+}
+
+
+#districtThaiTitle {
+
+    color: var(--green);
+
+    margin-top: 3px;
+
+}
+
+
+.district-product-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+
+    margin-top: 35px;
+
+}
+
+
+.district-product {
+
+    padding: 25px;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--pink-soft),
+            var(--blue-soft)
+        );
+
+}
+
+
+.district-product h4 {
+
+    font-family:
+        "TH Fah Kwang",
+        "K2D",
+        sans-serif;
+
+    font-size: 23px;
+
+    color: var(--green-dark);
+
+}
+
+
+.district-product p {
+
+    margin-top: 8px;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+}
+
+
+.district-product .map-btn {
+
+    display: inline-block;
+
+    margin-top: 15px;
+
+}
+
+
+/* ================= MAP BUTTON ================= */
+
+.map-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 10px 18px;
+
+    border-radius: 30px;
+
+    background: var(--green-dark);
+
+    color: white;
+
+    font-size: 12px;
+
+    transition: .3s;
+
+}
+
+
+.map-btn:hover {
+
+    transform: translateY(-2px);
+
+}
+
+
+/* ================= DIVIDER ================= */
+
+.thai-divider {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    padding: 20px 8%;
+
+    background: white;
+
+}
+
+
+.thai-divider span {
+
+    height: 1px;
+
+    flex: 1;
+
+    max-width: 350px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--gold-light)
+        );
+
+}
+
+
+.thai-divider span:last-child {
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--gold-light),
+            transparent
+        );
+
+}
+
+
+.divider-symbol {
+
+    color: var(--gold);
+
+    font-size: 25px;
+
+}
+
+
+/* ================= ABOUT ================= */
+
+.about-section {
+
+    background: white;
+
+}
+
+
+.about-card {
+
+    max-width: 1050px;
+
+    margin: auto;
+
+    padding: 60px;
+
+    display: grid;
+
+    grid-template-columns: 130px 1fr;
+
+    gap: 45px;
+
+    align-items: center;
+
+    border-radius: 35px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            var(--pink),
+            var(--blue-soft)
+        );
+
+}
+
+
+.about-icon {
+
+    width: 110px;
+
+    height: 110px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    font-size: 40px;
+
+    color: var(--gold);
+
+    background: white;
+
+    box-shadow:
+        0 15px 30px
+        rgba(79,111,105,.1);
+
+}
+
+
+.about-card h2 {
+
+    font-family:
+        "TH Fah Kwang",
+        "K2D",
+        sans-serif;
+
+    font-size: 45px;
+
+    color: var(--green-dark);
+
+}
+
+
+.about-card p {
+
+    margin-top: 12px;
+
+    line-height: 1.9;
+
+    font-size: 14px;
+
+}
+
+
+.notice {
+
+    padding: 15px 20px;
+
+    border-left:
+        3px solid var(--gold);
+
+    background:
+        rgba(255,255,255,.55);
+
+}
+
+
+/* ================= MODAL ================= */
+
+.modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 25px;
+
+    background:
+        rgba(54,73,69,.4);
+
+    backdrop-filter:
+        blur(8px);
+
+    z-index: 2000;
+
+}
+
+
+.modal.active {
+
+    display: flex;
+
+}
+
+
+.modal-box {
+
+    position: relative;
+
+    max-width: 900px;
+
+    width: 100%;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        40% 60%;
+
+    background: white;
+
+    border-radius: 30px;
+
+   overflow-y: auto;
+   overflow-x: hidden;
+
+    box-shadow:
+        0 30px 100px
+        rgba(0,0,0,.2);
+
+}
+
+
+.close-modal {
+
+    position: absolute;
+
+    top: 15px;
+
+    right: 20px;
+
+    width: 40px;
+
+    height: 40px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.8);
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    z-index: 5;
+
+}
+
+
+.modal-image {
+
+    min-height: 500px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 70px;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    color:
+        rgba(84,122,109,.4);
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--pink),
+            var(--blue-soft)
+        );
+
+}
+
+
+.modal-content {
+
+    padding: 50px;
+
+}
+
+
+.modal-content h2 {
+
+    font-family:
+        "TH Fah Kwang",
+        "K2D",
+        sans-serif;
+
+    font-size: 40px;
+
+    color: var(--green-dark);
+
+}
+
+
+.modal-thai {
+
+    color: var(--green);
+
+    margin-top: 5px;
+
+}
+
+
+.info-block {
+
+    margin-top: 25px;
+
+}
+
+
+.info-block h4 {
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+
+    color: var(--gold);
+
+}
+
+
+.info-block p {
+
+    margin-top: 6px;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    color: var(--text-light);
+
+}
+
+
+.modal-content .map-btn {
+
+    margin-top: 30px;
+
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+
+    text-align: center;
+
+    padding: 70px 20px;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            var(--blue-soft),
+            var(--pink)
+        );
+
+}
+
+
+.footer-lotus {
+
+    font-size: 40px;
+
+    color: var(--gold);
+
+}
+
+
+footer h3 {
+
+    margin-top: 10px;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 28px;
+
+    color: var(--green-dark);
+
+}
+
+
+footer p {
+
+    margin-top: 5px;
+
+    font-size: 13px;
+
+}
+
+
+.footer-thai {
+
+    color: var(--green);
+
+}
+
+
+footer small {
+
+    display: block;
+
+    margin-top: 25px;
+
+    color: var(--text-light);
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .product-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .district-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .lotus-scene {
+
+        right: -130px;
+
+        width: 580px;
+
+        opacity: .8;
+
+    }
+
+
+    .hero-content {
+
+        max-width: 600px;
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .navbar {
+
+        height: 68px;
+
+        padding:
+            0 5%;
+
+    }
+
+
+    .navbar nav {
+
+        display: none;
+
+    }
+
+
+    .menu-btn {
+
+        display: block;
+
+    }
+
+
+    .hero {
+
+        min-height: 850px;
+
+        padding:
+            130px 7% 60px;
+
+        align-items: flex-start;
+
+    }
+
+
+    .hero-content {
+
+        width: 100%;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 80px;
+
+        letter-spacing: -3px;
+
+    }
+
+
+    .hero h2 {
+
+        font-size: 25px;
+
+    }
+
+
+    .hero-description {
+
+        max-width: 90%;
+
+    }
+
+
+    .lotus-scene {
+
+        width: 430px;
+
+        right: -100px;
+
+        bottom: -20px;
+
+        opacity: .75;
+
+    }
+
+
+    .hero.scrolled .lotus-scene {
+
+        transform:
+            translateY(100px)
+            scale(.85);
+
+    }
+
+
+    .featured-section,
+    .district-section,
+    .about-section {
+
+        padding:
+            80px 5%;
+
+    }
+
+
+    .product-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .product-image {
+
+        height: 210px;
+
+    }
+
+
+    .district-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .district-result {
+
+        padding: 25px;
+
+        border-radius: 25px;
+
+    }
+
+
+    .district-product-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .result-header h3 {
+
+        font-size: 35px;
+
+    }
+
+
+    .about-card {
+
+        padding: 35px 25px;
+
+        grid-template-columns:
+            1fr;
+
+        text-align: center;
+
+    }
+
+
+    .about-icon {
+
+        margin: auto;
+
+    }
+
+
+    .about-card h2 {
+
+        font-size: 35px;
+
+    }
+
+
+    .notice {
+
+        text-align: left;
+
+    }
+
+
+    .modal {
+
+        padding: 12px;
+
+    }
+
+
+    .modal-box {
+
+        grid-template-columns:
+            1fr;
+
+        max-height: 94vh;
+
+    }
+
+
+    .modal-image {
+
+        min-height: 230px;
+
+    }
+
+
+    .modal-content {
+
+        padding: 30px;
+
+    }
+
+
+    .modal-content h2 {
+
+        font-size: 32px;
+
+    }
+
+}
+
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 420px) {
+
+    .hero h1 {
+
+        font-size: 68px;
+
+    }
+
+
+    .hero h2 {
+
+        font-size: 22px;
+
+    }
+
+
+    .lotus-scene {
+
+        width: 370px;
+
+        right: -120px;
+
+    }
+
+
+    .section-heading h2 {
+
+        font-size: 40px;
+
+    }
+
+}
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+.modal-image {
+    min-height: 500px;
+    overflow: hidden;
+}
+
+.modal-image {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+        145deg,
+        var(--pink),
+        var(--blue-soft)
+    );
+}
+
+.modal-image img {
+    width: 100%;
+    height: 100%;
+    max-height: 500px;
+    object-fit: contain;
+    display: block;
+}
+
+.district-product {
+    overflow: hidden;
+    padding: 0;
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--pink-soft),
+            var(--blue-soft)
+        );
+
+    box-shadow:
+        0 10px 30px
+        rgba(79, 111, 105, 0.07);
+
+    transition: 0.3s ease;
+}
+
+
+.district-product:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 18px 40px
+        rgba(79, 111, 105, 0.12);
+}
+
+
+/* กรอบรูป */
+
+.district-product-image {
+    width: 100%;
+    height: 240px;
+
+    overflow: hidden;
+
+    background: white;
+}
+
+
+/* รูปผลิตภัณฑ์ */
+
+.district-product-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition:
+        transform 0.5s ease;
+}
+
+
+/* เวลาเอาเมาส์ไปวาง */
+
+.district-product:hover
+.district-product-image img {
+
+    transform:
+        scale(1.05);
+
+}
+
+
+/* เนื้อหาด้านล่างรูป */
+
+.district-product-info {
+
+    padding: 25px;
+
+}
+/* ===== รูป 3 รูปหน้าแรก ===== */
+
+.hero-images {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    width: fit-content;
+}
+
+.hero-images img {
+    width: 110px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 12px;
+    border: 3px solid rgba(255,255,255,0.85);
+
+    box-shadow:
+        0 8px 20px rgba(79,111,105,0.10);
+
+    transition: 0.3s ease;
+}
+
+.hero-images img:hover {
+    transform: translateY(-4px);
+}
+
+
+/* ===== สำหรับมือถือ ===== */
+
+@media (max-width: 700px) {
+
+    .hero-images {
+        gap: 7px;
+        margin-top: 16px;
+    }
+
+    .hero-images img {
+        width: 75px;
+        height: 55px;
+        border-radius: 9px;
+        border-width: 2px;
+    }
+
+}
+/* =====================================================
+   PRODUCT CARD - DISTRICT
+   ชื่อสินค้าไทย / English
+===================================================== */
+
+/* ชื่อตำบล */
+#districtProducts .district-product-info .eyebrow {
+    font-size: 13px !important;
+    color: #c9a45c !important;
+    letter-spacing: 2px !important;
+    margin: 0 0 10px 0 !important;
+}
+
+/* ชื่อสินค้า ENGLISH */
+#districtProducts .district-product-info h4 {
+    font-family: "TH Fah Kwang", "K2D", sans-serif !important;
+    font-size: 28px !important;
+    font-weight: 600 !important;
+    line-height: 1.2 !important;
+    color: #527d76 !important;
+    margin: 0 !important;
+}
+
+/* ชื่อสินค้า THAI */
+#districtProducts .district-product-info .product-thai-name {
+    display: block !important;
+
+    font-family: "K2D", sans-serif !important;
+
+    font-size: 18px !important;
+    font-weight: 400 !important;
+
+    line-height: 1.4 !important;
+
+    color: #91aaa5 !important;
+
+    margin: 4px 0 18px 0 !important;
+}
+
+/* Description */
+#districtProducts .district-product-info > p:not(.eyebrow):not(.product-thai-name) {
+    font-family: "K2D", sans-serif !important;
+
+    font-size: 13px !important;
+    line-height: 1.8 !important;
+
+    color: #526765 !important;
+
+    margin: 0 0 12px 0 !important;
+}
+
+
+/* =====================================================
+   DESCRIPTION / VIEW MORE
+   DESKTOP + TABLET
+   ไม่มี View More
+===================================================== */
+
+.description-preview {
+    display: none !important;
+}
+
+.description-full {
+    display: block !important;
+    max-height: none !important;
+    height: auto !important;
+    overflow: visible !important;
+}
+
+.full-details {
+    display: block !important;
+}
+
+.view-more-btn,
+.view-less-btn {
+    display: none !important;
+}
+
+/* =====================================================
+   FULL DESCRIPTION
+   DESKTOP + iPAD LANDSCAPE
+===================================================== */
+
+@media (min-width: 768px) {
+
+    .district-product .description-full {
+        display: block !important;
+        max-height: none !important;
+        height: auto !important;
+        overflow: visible !important;
+    }
+
+    .district-product .description-preview {
+        display: none !important;
+    }
+
+    .district-product .view-more-btn {
+        display: none !important;
+    }
+
+    .district-product .district-product-info {
+        height: auto !important;
+        max-height: none !important;
+        overflow: visible !important;
+    }
+
+    .district-product {
+        height: auto !important;
+        max-height: none !important;
+    }
+
+}
+
+/* =====================================================
+   VIEW DETAILS — PHONE ONLY
+===================================================== */
+
+@media screen and (max-width: 600px) {
+
+    .district-product:not(.expanded) .description-preview {
+        display: -webkit-box !important;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        line-height: 1.7;
+        max-height: calc(1.7em * 3);
+    }
+
+    .district-product:not(.expanded) .description-full {
+        display: none !important;
+    }
+
+    .district-product:not(.expanded) .full-details {
+        display: none !important;
+    }
+
+    .district-product:not(.expanded) .view-more-btn {
+        display: flex !important;
+        width: calc(100% + 50px);
+        margin-left: -25px;
+        margin-top: 14px;
+        padding: 9px 15px;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        background: #eeeeee;
+        color: #60716e;
+        font-family: "K2D", sans-serif;
+        font-size: 12px;
+        line-height: 1.4;
+        cursor: pointer;
+    }
+
+    .district-product:not(.expanded) .map-btn {
+        display: none !important;
+    }
+
+
+    .district-product.expanded .description-preview {
+        display: none !important;
+    }
+
+    .district-product.expanded .description-full {
+        display: block !important;
+        max-height: none !important;
+        overflow: visible !important;
+    }
+
+    .district-product.expanded .full-details {
+        display: block !important;
+    }
+
+    .district-product.expanded .view-more-btn {
+        display: none !important;
+    }
+
+    .district-product.expanded .view-less-btn {
+        display: flex !important;
+        width: calc(100% + 50px);
+        margin-left: -25px;
+        margin-top: 14px;
+        padding: 9px 15px;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        background: #eeeeee;
+        color: #60716e;
+        font-family: "K2D", sans-serif;
+        font-size: 12px;
+        line-height: 1.4;
+        cursor: pointer;
+    }
+
+    .district-product.expanded .map-btn {
+        display: inline-flex !important;
+    }
+
+}
+
+/* =========================================
+   OTOP COMMUNITY DECORATIONS
+   Desktop + iPad only
+   ========================================= */
+
+.otop-decor {
+    position: absolute;
+    left: 3%;
+    bottom: 7%;
+    width: 330px;
+    height: 230px;
+    z-index: 6;
+    pointer-events: none;
+}
+
+/* แต่ละองค์ประกอบ */
+.otop-item {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 38px;
+    line-height: 1;
+
+    width: 78px;
+    height: 78px;
+
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid rgba(201, 167, 93, 0.28);
+    border-radius: 22px;
+
+    box-shadow: 0 10px 30px rgba(79, 111, 105, 0.08);
+
+    backdrop-filter: blur(5px);
+
+    transform: rotate(0deg);
+}
+
+/* ชื่อเล็ก ๆ ใต้ไอคอน */
+.otop-item span {
+    margin-top: 7px;
+
+    font-family: "K2D", sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+
+    color: #70817e;
+    white-space: nowrap;
+}
+
+/* ตำแหน่งแต่ละชิ้น */
+.otop-basket {
+    left: 5px;
+    bottom: 35px;
+    transform: rotate(-6deg);
+}
+
+.otop-silk {
+    left: 82px;
+    bottom: 105px;
+    transform: rotate(4deg);
+}
+
+.otop-rice {
+    left: 155px;
+    bottom: 25px;
+    transform: rotate(-3deg);
+}
+
+.otop-pottery {
+    left: 225px;
+    bottom: 95px;
+    transform: rotate(6deg);
+}
+
+.otop-food {
+    left: 255px;
+    bottom: 5px;
+    transform: rotate(-5deg);
+}
+
+/* =====================================================
+   GUIDE PAGE
+===================================================== */
+
+.guide-page {
+    position: fixed;
+    inset: 0;
+    z-index: 5000;
+
+    display: none;
+
+    overflow-y: auto;
+
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(255,239,242,.8),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(183,233,233,.55),
+            transparent 35%
+        ),
+        #ffffff;
+
+    padding: 100px 7% 70px;
+}
+
+.guide-page.active {
+    display: block;
+}
+
+
+/* ================= CONTAINER ================= */
+
+.guide-container {
+    max-width: 950px;
+    margin: auto;
+}
+
+
+/* ================= BACK ================= */
+
+.guide-back {
+    border: none;
+    background: rgba(255,255,255,.8);
+
+    padding: 10px 18px;
+
+    border-radius: 30px;
+
+    color: var(--green-dark);
+
+    font-family: "K2D", sans-serif;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 25px rgba(79,111,105,.08);
+
+    transition: .3s;
+}
+
+.guide-back:hover {
+    transform: translateX(-4px);
+}
+
+
+/* ================= HEADER ================= */
+
+.guide-header {
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: 45px auto 30px;
+}
+
+.guide-eyebrow {
+    color: var(--gold);
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 10px;
+}
+
+.guide-header h1 {
+    font-family:
+        "TH Fah Kwang",
+        "K2D",
+        sans-serif;
+
+    font-size: clamp(55px, 8vw, 90px);
+
+    line-height: 1;
+
+    color: var(--green-dark);
+}
+
+.guide-thai-title {
+    margin-top: 8px;
+
+    font-family:
+        "TH Fah Kwang",
+        "K2D",
+        sans-serif;
+
+    font-size: 25px;
+
+    color: var(--green);
+}
+
+.guide-intro {
+    margin-top: 18px;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    color: var(--text-light);
+}
+
+
+/* ================= LANGUAGE ================= */
+
+.guide-language {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin: 30px 0 45px;
+}
+
+.language-btn {
+    border: none;
+
+    background: transparent;
+
+    color: #9aa9a6;
+
+    font-family: "K2D", sans-serif;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    padding: 5px 10px;
+
+    transition: .3s;
+}
+
+.language-btn.active {
+    color: var(--green-dark);
+
+    font-weight: 600;
+
+    border-bottom:
+        1px solid var(--gold);
+}
+
+
+/* ================= LANGUAGE CONTENT ================= */
+
+.guide-content {
+    display: none;
+}
+
+.guide-content.active {
+    display: block;
+}
+
+
+/* ================= CATEGORY ================= */
+
+.guide-category {
+    margin-bottom: 45px;
+}
+
+.guide-category h2 {
+    font-family:
+        "TH Fah Kwang",
+        "K2D",
+        sans-serif;
+
+    font-size: 32px;
+
+    color: var(--green-dark);
+
+    margin-bottom: 18px;
+}
+
+
+/* ================= FAQ ================= */
+
+.faq-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.faq-item {
+    background: rgba(255,255,255,.85);
+
+    border:
+        1px solid rgba(201,167,93,.16);
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 8px 25px rgba(79,111,105,.05);
+}
+
+.faq-question {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 18px 22px;
+
+    border: none;
+
+    background: transparent;
+
+    text-align: left;
+
+    color: var(--text);
+
+    font-family: "K2D", sans-serif;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+.faq-plus {
+    flex-shrink: 0;
+
+    font-size: 20px;
+
+    color: var(--gold);
+
+    transition: .3s;
+}
+
+.faq-item.open .faq-plus {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    max-height: 0;
+
+    overflow: hidden;
+
+    padding: 0 22px;
+
+    font-family: "K2D", sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+
+    color: var(--text-light);
+
+    transition:
+        max-height .35s ease,
+        padding .35s ease;
+}
+
+.faq-item.open .faq-answer {
+    max-height: 300px;
+
+    padding:
+        0 22px 20px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+
+    .guide-page {
+        padding: 85px 6% 50px;
+    }
+
+    .guide-header {
+        margin-top: 35px;
+    }
+
+    .guide-header h1 {
+        font-size: 60px;
+    }
+
+    .guide-thai-title {
+        font-size: 22px;
+    }
+
+    .guide-category h2 {
+        font-size: 27px;
+    }
+
+    .faq-question {
+        padding: 16px;
+
+        font-size: 13px;
+    }
+
+    .faq-answer {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .faq-item.open .faq-answer {
+        padding:
+            0 16px 18px;
+    }
+
+}
+
+/* =====================================================
+   OTOP EMOJI SHADOWS
+===================================================== */
+
+.otop-emoji-shadows {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1;
+}
+
+
+/* -----------------------------
+   BASE
+----------------------------- */
+
+.emoji-shadow {
+    position: absolute;
+    display: block;
+
+    /*
+       emoji → monochrome shadow
+    */
+    filter:
+        grayscale(1)
+        brightness(.72);
+
+    opacity: .13;
+
+    line-height: 1;
+    user-select: none;
+}
+
+
+/* =====================================================
+   BIG OBJECTS
+===================================================== */
+
+/* 🧺 basket */
+.emoji-shadow.basket {
+    left: 5%;
+    bottom: -45px;
+
+    font-size: 190px;
+
+    transform:
+        rotate(-9deg)
+        scale(1.05);
+}
+
+
+/* 👚 cloth */
+.emoji-shadow.cloth {
+    left: 27%;
+    bottom: -55px;
+
+    font-size: 180px;
+
+    transform:
+        rotate(-10deg)
+        scale(.95);
+
+    opacity: 0.11;
+}
+
+
+/* 🏺 jar */
+.emoji-shadow.jar {
+    right: 35%;
+    bottom: -60px;
+
+    font-size: 175px;
+
+    transform:
+        rotate(7deg)
+        scale(.95);
+}
+
+/* =====================================================
+   SMALL LEAVES
+===================================================== */
+
+.emoji-shadow.leaf {
+    font-size: 48px;
+    opacity: .10;
+}
+
+
+/* leaf 1 */
+.leaf-1 {
+    left: 22%;
+    bottom: 48px;
+
+    transform: rotate(-25deg);
+}
+
+
+/* leaf 2 */
+.leaf-2 {
+    left: 42%;
+    bottom: 18px;
+
+    font-size: 40px;
+
+    transform: rotate(18deg);
+}
+
+
+/* leaf 3 */
+.leaf-3 {
+    left: 49%;
+    bottom: 55px;
+
+    font-size: 43px;
+
+    transform: rotate(-35deg);
+}
+
+
+/* leaf 4 */
+.leaf-4 {
+    right: 34%;
+    bottom: 22px;
+
+    font-size: 38px;
+
+    transform: rotate(27deg);
+}
+
+
+/* leaf 5 */
+.leaf-5 {
+    right: 23%;
+    bottom: 68px;
+
+    font-size: 46px;
+
+    transform: rotate(-18deg);
+}
+
+
+/* leaf 6 */
+.leaf-6 {
+    right: 6%;
+    bottom: 35px;
+
+    font-size: 42px;
+
+    transform: rotate(30deg);
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .emoji-shadow.basket {
+        left: -15px;
+        bottom: -28px;
+        font-size: 120px;
+        transform: rotate(-8deg);
+    }
+
+    .emoji-shadow.jar {
+        right: -8px;
+        bottom: -35px;
+        font-size: 110px;
+        transform: rotate(7deg);
+    }
+
+    .emoji-shadow.lotus-small {
+        left: 40%;
+        bottom: -20px;
+        font-size: 70px;
+    }
+
+    .emoji-shadow.leaf {
+        font-size: 30px;
+    }
+
+    .leaf-1 {
+        left: 20%;
+        bottom: 35px;
+    }
+
+    .leaf-2 {
+        left: 35%;
+        bottom: 15px;
+    }
+
+    .leaf-3 {
+        left: 50%;
+        bottom: 40px;
+    }
+
+    .leaf-4 {
+        right: 30%;
+        bottom: 15px;
+    }
+
+    .leaf-5 {
+        right: 18%;
+        bottom: 45px;
+    }
+
+    .leaf-6 {
+        right: 3%;
+        bottom: 25px;
+    }
+}
+/* =====================================================
+   MOBILE — FILL THE LOWER HERO AREA
+===================================================== */
+
+@media (max-width: 767px) {
+
+    /* 🧺 Basket */
+    .emoji-shadow.basket {
+        left: -5%;
+        bottom: -45px;
+        font-size: 145px;
+
+        transform:
+            rotate(-12deg)
+            scale(1);
+    }
+
+
+    /* 👚 Cloth */
+    .emoji-shadow.cloth {
+        left: 28%;
+        bottom: -30px;
+        font-size: 135px;
+
+        transform:
+            rotate(-10deg)
+            scale(.95);
+    }
+
+
+    /* 🏺 Jar */
+    .emoji-shadow.jar {
+        right: -4%;
+        bottom: -55px;
+        font-size: 140px;
+
+        transform:
+            rotate(9deg)
+            scale(.95);
+    }
+
+
+    /* 🍃🌿 Leaves */
+    .emoji-shadow.leaf {
+        font-size: 42px;
+    }
+
+    .emoji-shadow.leaf-1 {
+        left: 18%;
+        bottom: 85px;
+        transform: rotate(-25deg);
+    }
+
+    .emoji-shadow.leaf-2 {
+        left: 42%;
+        bottom: 125px;
+        transform: rotate(18deg);
+    }
+
+    .emoji-shadow.leaf-3 {
+        right: 20%;
+        bottom: 100px;
+        transform: rotate(-15deg);
+    }
+
+    .emoji-shadow.leaf-4 {
+        left: 5%;
+        bottom: 155px;
+        transform: rotate(25deg);
+    }
+
+    .emoji-shadow.leaf-5 {
+        right: 5%;
+        bottom: 175px;
+        transform: rotate(-20deg);
+    }
+
+    .emoji-shadow.leaf-6 {
+        right: 35%;
+        bottom: 65px;
+        transform: rotate(15deg);
+    }
+}
+
+/* =====================================================
+   IPAD LANDSCAPE — SMALLER & MORE SPREAD OUT
+===================================================== */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    /* 🧺 basket */
+    .emoji-shadow.basket {
+        left: 2%;
+        bottom: -35px;
+        font-size: 135px;
+
+        transform:
+            rotate(-10deg)
+            scale(1);
+    }
+
+
+    /* 👚 cloth */
+    .emoji-shadow.cloth {
+        left: 36%;
+        bottom: -40px;
+        font-size: 125px;
+
+        transform:
+            rotate(-9deg)
+            scale(.95);
+    }
+
+
+    /* 🏺 jar */
+    .emoji-shadow.jar {
+        right: 4%;
+        bottom: -45px;
+        font-size: 130px;
+
+        transform:
+            rotate(8deg)
+            scale(.95);
+    }
+
+
+    /* 🍃 leaves */
+    .emoji-shadow.leaf {
+        font-size: 35px;
+    }
+
+    .leaf-1 {
+        left: 18%;
+        bottom: 35px;
+    }
+
+    .leaf-2 {
+        left: 32%;
+        bottom: 20px;
+    }
+
+    .leaf-3 {
+        left: 48%;
+        bottom: 45px;
+    }
+
+    .leaf-4 {
+        right: 30%;
+        bottom: 25px;
+    }
+
+    .leaf-5 {
+        right: 17%;
+        bottom: 50px;
+    }
+
+    .leaf-6 {
+        right: 3%;
+        bottom: 30px;
+    }
+}
+
+@keyframes otopShine {
+
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -100% 0;
+    }
+
+}
+
+/* =====================================================
+   DISTRICT IMAGE LIGHTBOX
+===================================================== */
+
+.image-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px;
+
+    background: rgba(30, 45, 42, 0.72);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}
+
+.image-lightbox.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.image-lightbox img {
+    display: block;
+
+    max-width: min(850px, 90vw);
+    max-height: 82vh;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.25);
+
+    transform: scale(0.94);
+
+    transition:
+        transform 0.35s ease;
+}
+
+.image-lightbox.active img {
+    transform: scale(1);
+}
+
+
+/* CLOSE BUTTON */
+
+.image-lightbox-close {
+    position: absolute;
+
+    top: 24px;
+    right: 30px;
+
+    width: 46px;
+    height: 46px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.92);
+
+    color: var(--green-dark);
+
+    font-size: 30px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.image-lightbox-close:hover {
+    transform: rotate(90deg);
+    background: #ffffff;
+}
+
+
+/* รูปสินค้าในอำเภอให้รู้ว่ากดได้ */
+
+.district-product-image {
+    cursor: zoom-in;
+}
+
+.district-product-image img {
+    cursor: zoom-in;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .image-lightbox {
+        padding: 20px;
+    }
+
+    .image-lightbox img {
+        max-width: 92vw;
+        max-height: 75vh;
+        border-radius: 14px;
+    }
+
+    .image-lightbox-close {
+        top: 18px;
+        right: 18px;
+
+        width: 42px;
+        height: 42px;
+
+        font-size: 27px;
+    }
+}
+
+.faq-answer a {
+    color: var(--green-dark);
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 1px solid var(--gold);
+}
+
+.faq-answer a:hover {
+    color: var(--gold);
+}
+
+/* =====================================================
+   PRODUCT CATEGORY FILTER
+===================================================== */
+
+#categoryFilters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+    margin-bottom: 10px;
+}
+
+.category-filter-btn {
+    border: 1px solid rgba(84, 122, 109, 0.22);
+    background: rgba(255, 255, 255, 0.88);
+
+    padding: 10px 20px;
+
+    border-radius: 999px;
+
+    color: var(--green-dark);
+
+    font-family: "K2D", sans-serif;
+
+    cursor: pointer;
+
+    transition:
+        background .25s ease,
+        color .25s ease,
+        transform .2s ease,
+        box-shadow .25s ease;
+}
+
+.category-filter-btn span {
+    display: block;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+.category-filter-btn small {
+    display: block;
+    margin-top: 2px;
+
+    font-size: 11px;
+    font-weight: 300;
+
+    opacity: .72;
+}
+
+.category-filter-btn:hover {
+    transform: translateY(-2px);
+}
+
+.category-filter-btn.active {
+    background: var(--green-dark);
+    color: white;
+
+    box-shadow:
+        0 8px 20px rgba(84, 122, 109, .16);
+}
+
+
+/* เว้นระยะจากปุ่ม Back */
+
+#backDistrictBtn {
+    margin-bottom: 30px;
+}
+
+
+/* ไม่มีสินค้าในหมวด */
+
+.category-empty {
+    grid-column: 1 / -1;
+
+    text-align: center;
+
+    padding: 40px 20px;
+
+    color: var(--text-soft);
+}
+
+
+@media (max-width: 600px) {
+
+    #categoryFilters {
+        gap: 8px;
+        margin-top: 22px;
+        margin-bottom: 8px;
+    }
+
+    .category-filter-btn {
+        padding: 9px 15px;
+    }
+
+    .category-filter-btn span {
+        font-size: 13px;
+    }
+
+    .category-filter-btn small {
+        font-size: 10px;
+    }
+
+}
